@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_gravity="right|center"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+            <TextView
+                android:id="@+id/city_name"
+                android:text="city"
+                android:layout_marginLeft="28dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_margin="12dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#D8282233"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/texttop1"
+                    android:text="Total Confirmed Cases"
+                    android:textColor="#fff"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <ImageView
+                    app:layout_constraintTop_toBottomOf="@id/texttop1"
+                    app:layout_constraintLeft_toLeftOf="@id/texttop1"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_baseline_check_24"
+                    android:id="@+id/imageview1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"/>
+
+                <TextView
+                    android:id="@+id/total_confirmed_cases"
+                    tools:text="54564645"
+                    android:textColor="#24F82C"
+                    android:textSize="30sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageview1"
+                    android:layout_marginRight="12dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/daily_increment"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"
+                    tools:text="14545"
+                    android:textColor="#24F82C"
+                    app:layout_constraintTop_toBottomOf="@id/imageview1"
+                    app:layout_constraintRight_toRightOf="@id/total_confirmed_cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@id/daily_increment"
+                    app:layout_constraintRight_toLeftOf="@id/daily_increment"
+                    app:layout_constraintTop_toTopOf="@id/daily_increment"
+                    android:text="Daily increment:"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="12dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#D8282233"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/texttop2"
+                    android:text="Total Deceased"
+                    android:textColor="#fff"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <ImageView
+                    app:layout_constraintTop_toBottomOf="@id/texttop2"
+                    app:layout_constraintLeft_toLeftOf="@id/texttop2"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/skull"
+                    android:id="@+id/imageview2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+
+                <TextView
+                    android:id="@+id/total_confirmed_dead"
+                    tools:text="54564645"
+                    android:textColor="#F8184C"
+                    android:textSize="30sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageview2"
+                    android:layout_marginRight="12dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/daily_increment_dead"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"
+                    tools:text="14545"
+                    android:textColor="#F8184C"
+                    app:layout_constraintTop_toBottomOf="@id/imageview2"
+                    app:layout_constraintRight_toRightOf="@id/total_confirmed_dead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@id/daily_increment_dead"
+                    app:layout_constraintRight_toLeftOf="@id/daily_increment_dead"
+                    app:layout_constraintTop_toTopOf="@id/daily_increment_dead"
+                    android:text="Daily increment:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="12dp"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#D8282233"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/texttop3"
+                    android:text="Total Recovered"
+                    android:textColor="#fff"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <ImageView
+                    app:layout_constraintTop_toBottomOf="@id/texttop3"
+                    app:layout_constraintLeft_toLeftOf="@id/texttop3"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/recovered"
+                    android:id="@+id/imageview3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"/>
+
+                <TextView
+                    android:id="@+id/total_confirmed_recovered"
+                    tools:text="54564645"
+                    android:textColor="#1BDAF3"
+                    android:textSize="30sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageview3"
+                    android:layout_marginRight="12dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/daily_increment_recovered"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"
+                    tools:text="14545"
+                    android:textColor="#1BDAF3"
+                    app:layout_constraintTop_toBottomOf="@id/imageview3"
+                    app:layout_constraintRight_toRightOf="@id/total_confirmed_recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@id/daily_increment_recovered"
+                    app:layout_constraintRight_toLeftOf="@id/daily_increment_recovered"
+                    app:layout_constraintTop_toTopOf="@id/daily_increment_recovered"
+                    android:text="Daily increment:"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.akexorcist.roundcornerprogressbar.indeterminate.IndeterminateRoundCornerProgressBar
+        android:layout_width="260dp"
+        android:id="@+id/progress_bar"
+        android:layout_height="18dp"
+        app:rcRadius="10dp"
+        android:layout_gravity="center"
+        app:rcAnimationSpeedScale="3"
+        app:rcBackgroundColor="#0A000000"
+        app:rcProgressColor="#09D4ED" />
+
+
+</FrameLayout>
